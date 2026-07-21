@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://ceuvalluc8uv1" path="res://source/01 - Main/00 - Spookivice/Spookivice.gd" id="1_ayhqb"]
 [ext_resource type="Texture2D" uid="uid://4250jyv0a3f7" path="res://assets/00 - UserInterface/00 - Spookivice/Spookivice.png" id="2_vakwt"]
 [ext_resource type="Texture2D" uid="uid://y66vmsoqj2vd" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/Left_Button_Unpressed.png" id="3_8e37w"]
+[ext_resource type="PackedScene" uid="uid://dhb4rr62ffxjv" path="res://source/01 - Main/01 - Screens/00 - Top/TopScreen.tscn" id="3_31omo"]
 [ext_resource type="Texture2D" uid="uid://sg8v2m24lc3x" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/02 - Toggles/Spookivice_On.png" id="3_gm5fq"]
 [ext_resource type="Texture2D" uid="uid://cjat7kvm6bmg5" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/Menu_Button_Unpressed.png" id="3_vakwt"]
 [ext_resource type="Texture2D" uid="uid://bt7fb3jinkimw" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/Menu_Button_Pressed.png" id="4_1srch"]
 [ext_resource type="Texture2D" uid="uid://n7i33r1ngnxq" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/02 - Toggles/Spookivice_Off.png" id="4_31omo"]
 [ext_resource type="Texture2D" uid="uid://be76ppoesvkt8" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/Left_Arrow_Pressed.png" id="4_eh7ka"]
+[ext_resource type="Script" uid="uid://dmiw3ydbb01nx" path="res://source/01 - Main/01 - Screens/00 - Top/TopScreen.gd" id="4_qmojm"]
 [ext_resource type="Texture2D" uid="uid://bqe3oqbp8teq0" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/Right_Button_Unpressed.png" id="5_eh7ka"]
 [ext_resource type="Texture2D" uid="uid://3selp3jp475o" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/Right_Arrow_Pressed.png" id="6_qdrm8"]
 [ext_resource type="Texture2D" uid="uid://bkrmapbnyu4rx" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/02 - Toggles/Sound_On.png" id="7_qmojm"]
@@ -21,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://b5pslqhjhd0g3" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/X_Button_Unpressed.png" id="15_da84v"]
 [ext_resource type="Texture2D" uid="uid://cmin1qq1wgq5b" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/X_Button_Pressed.png" id="16_68csv"]
 [ext_resource type="Texture2D" uid="uid://c3u4h1h5ya4h8" path="res://assets/00 - UserInterface/00 - Spookivice/00 - Screens/Bottom Screen.png" id="17_1lxtc"]
-[ext_resource type="Texture2D" uid="uid://wnc2m06npfqg" path="res://assets/00 - UserInterface/00 - Spookivice/00 - Screens/Top Screen.png" id="18_x3qfm"]
 
 [node name="Spookivice" type="Control" unique_id=1499716846 node_paths=PackedStringArray("border")]
 layout_mode = 3
@@ -55,19 +56,18 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="TopScreen" parent="Screens" unique_id=1668624340 instance=ExtResource("3_31omo")]
+layout_mode = 0
+stretch_mode = 2
+script = ExtResource("4_qmojm")
+location = "Graveyard"
+
 [node name="BottomScreen" type="TextureRect" parent="Screens" unique_id=1480069952]
 layout_mode = 0
 offset_right = 281.0
 offset_bottom = 265.0
 mouse_filter = 2
 texture = ExtResource("17_1lxtc")
-
-[node name="TopScreen" type="TextureRect" parent="Screens" unique_id=1757084300]
-layout_mode = 0
-offset_right = 281.0
-offset_bottom = 265.0
-mouse_filter = 2
-texture = ExtResource("18_x3qfm")
 
 [node name="Toggles" type="Control" parent="." unique_id=945017505]
 layout_mode = 1

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dhb4rr62ffxjv"]
+
+[ext_resource type="Texture2D" uid="uid://wnc2m06npfqg" path="res://assets/00 - UserInterface/00 - Spookivice/00 - Screens/Top Screen.png" id="1_w7ctl"]
+[ext_resource type="PackedScene" uid="uid://dftcgo4cne1st" path="res://source/01 - Main/02 - Entities/00 - Cryptid/Cryptid.tscn" id="2_w0rnr"]
+
+[node name="TopScreen" type="TextureRect" unique_id=1668624340]
+offset_right = 281.0
+offset_bottom = 265.0
+mouse_filter = 2
+texture = ExtResource("1_w7ctl")
+metadata/_edit_vertical_guides_ = [84.0, 197.0, 141.0]
+
+[node name="LevelBorder" type="StaticBody2D" parent="." unique_id=934322642]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBorder" unique_id=2071827324]
+polygon = PackedVector2Array(87, 173, 84, 173, 84, 189, 90, 195, 191, 195, 197, 189, 197, 171, 84, 171, 84, 173, 194, 173, 194, 188, 190, 192, 91, 192, 87, 188)
+
+[node name="Cryptid" parent="." unique_id=1065017632 instance=ExtResource("2_w0rnr")]
+position = Vector2(141, 180)
+hunger = "Satiated"
