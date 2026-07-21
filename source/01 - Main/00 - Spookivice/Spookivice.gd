@@ -2,12 +2,12 @@ extends Control
 #------------------------------------------------------------------------------#
 # Variables
 var dragPoint = null
-@export var polygon: Polygon2D
+@export var border: Polygon2D
 #------------------------------------------------------------------------------#
 #Functions
 func _has_point(point: Vector2) -> bool:
-	var local_point: Vector2 = point - polygon.position
-	return Geometry2D.is_point_in_polygon(local_point, polygon.polygon)
+	var local_point: Vector2 = point - border.position
+	return Geometry2D.is_point_in_polygon(local_point, border.polygon)
 #------------------------------------------------------------------------------#
 #Signaled Functions
 func _on_gui_input(event):
