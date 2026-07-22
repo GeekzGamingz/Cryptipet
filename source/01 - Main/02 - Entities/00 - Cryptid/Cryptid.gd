@@ -1,9 +1,9 @@
 extends CharacterBody2D
 class_name Cryptid
-## Cryptids
+## Cryptid
 ##
-## All Cryptids inherit from [CharacterBody2D]. The player never has direct control[br]
-## over the Cryptid and only can influence its behaviors by tending to its needs.
+## All [Cryptid]s inherit from [CharacterBody2D]. The player never has direct control[br]
+## over the [Cryptid] and only can influence its behaviors by tending to its needs.
 #------------------------------------------------------------------------------#
 # Variables
 # Exported Variables
@@ -32,7 +32,10 @@ class_name Cryptid
 	"Happy",
 	"Elated",
 	"Euphoric"
-) var happiness: String = "Neutral"
+) var happiness: String = "Neutral":
+	set(new_happiness):
+		happiness = new_happiness
+		print("Happiness: ", happiness)
 ## Sets the [enum hunger] level of the player's [Cryptid] to the specified [String];[br]
 ## Hunger can greatly affect the [enum happiness] of the [Cryptid] and how it evolves.[br][br]
 ## Default = "Satiated"

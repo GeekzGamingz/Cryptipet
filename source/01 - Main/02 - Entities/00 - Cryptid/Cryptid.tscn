@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dftcgo4cne1st"]
 
 [ext_resource type="Script" uid="uid://dhma1bkni6i3v" path="res://source/01 - Main/02 - Entities/00 - Cryptid/Cryptid.gd" id="1_l3a0e"]
+[ext_resource type="Script" uid="uid://cpqxbypr2mxug" path="res://source/01 - Main/02 - Entities/00 - Cryptid/CryptidFSM.gd" id="2_efcjr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a1j8a"]
 radius = 2.0
@@ -9,6 +10,26 @@ height = 10.0
 [node name="Cryptid" type="CharacterBody2D" unique_id=1065017632]
 script = ExtResource("1_l3a0e")
 
+[node name="CryptidFSM" type="Node2D" parent="." unique_id=678006856]
+script = ExtResource("2_efcjr")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706723827]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_a1j8a")
+
+[node name="Outputs" type="Node2D" parent="." unique_id=1958444179]
+
+[node name="StateOutput" type="Label" parent="Outputs" unique_id=931993900]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -9.0
+offset_right = 9.0
+offset_bottom = 9.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 6
+text = "State"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

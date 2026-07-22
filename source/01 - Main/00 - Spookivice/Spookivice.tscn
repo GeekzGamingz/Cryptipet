@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://x8tyigrgd17i"]
 
 [ext_resource type="Script" uid="uid://ceuvalluc8uv1" path="res://source/01 - Main/00 - Spookivice/Spookivice.gd" id="1_ayhqb"]
+[ext_resource type="Script" uid="uid://ditu4xenbb0mk" path="res://source/01 - Main/00 - Spookivice/Border.gd" id="2_qmojm"]
 [ext_resource type="Texture2D" uid="uid://4250jyv0a3f7" path="res://assets/00 - UserInterface/00 - Spookivice/Spookivice.png" id="2_vakwt"]
 [ext_resource type="Texture2D" uid="uid://y66vmsoqj2vd" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/Left_Button_Unpressed.png" id="3_8e37w"]
 [ext_resource type="PackedScene" uid="uid://dhb4rr62ffxjv" path="res://source/01 - Main/01 - Screens/00 - Top/TopScreen.tscn" id="3_31omo"]
@@ -39,7 +40,8 @@ border = NodePath("Border")
 [node name="Border" type="Polygon2D" parent="." unique_id=723103497]
 color = Color(1, 1, 1, 0)
 offset = Vector2(-0.5, -0.5)
-polygon = PackedVector2Array(91, 56, 191, 56, 198, 59, 243, 104, 246, 111, 246, 125, 250, 129, 252, 140, 252, 182, 250, 193, 246, 197, 246, 211, 243, 218, 198, 263, 191, 266, 91, 266, 84, 263, 39, 218, 36, 211, 36, 197, 32, 193, 30, 182, 30, 140, 32, 129, 36, 125, 36, 111, 39, 104, 84, 59)
+polygon = PackedVector2Array(91, 56, 97.977196, 56, 101, 53, 102, 53, 102, 40, 100, 38, 100, 35, 105, 30, 107, 30, 112, 35, 112, 38, 110, 40, 110, 53, 111, 53, 114, 56, 168, 56, 171, 53, 172, 53, 172, 40, 170, 38, 170, 35, 175, 30, 177, 30, 182, 35, 182, 38, 180, 40, 180, 53, 181, 53, 184, 56, 191, 56, 198, 59, 243, 104, 246, 111, 246, 125, 250, 129, 252, 140, 252, 182, 250, 193, 246, 197, 246, 211, 243, 218, 198, 263, 191, 266, 91, 266, 84, 263, 39, 218, 36, 211, 36, 197, 32, 193, 30, 182, 30, 140, 32, 129, 36, 125, 36, 111, 39, 104, 84, 59)
+script = ExtResource("2_qmojm")
 
 [node name="Spookivice" type="TextureRect" parent="." unique_id=1240341634]
 layout_mode = 1
@@ -60,7 +62,6 @@ mouse_filter = 2
 layout_mode = 0
 stretch_mode = 2
 script = ExtResource("4_qmojm")
-location = "Graveyard"
 
 [node name="BottomScreen" type="TextureRect" parent="Screens" unique_id=1480069952]
 layout_mode = 0

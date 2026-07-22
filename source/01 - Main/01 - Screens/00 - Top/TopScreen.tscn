@@ -17,4 +17,3 @@ polygon = PackedVector2Array(87, 173, 84, 173, 84, 189, 90, 195, 191, 195, 197, 
 
 [node name="Cryptid" parent="." unique_id=1065017632 instance=ExtResource("2_w0rnr")]
 position = Vector2(141, 180)
-hunger = "Satiated"
