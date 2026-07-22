@@ -1,0 +1,39 @@
+[gd_resource type="Theme" format=3 uid="uid://5hdiyrqlevro"]
+
+[ext_resource type="Texture2D" uid="uid://ml8fjrxcafya" path="res://assets/00 - Spookivice/00 - Screens/01 - Bottom/Screen_Scrollbar_Bar_Grey.png" id="1_wkjul"]
+[ext_resource type="Texture2D" uid="uid://b064ljgncgn05" path="res://assets/00 - Spookivice/00 - Screens/01 - Bottom/Screen_Scrollbar.png" id="2_bkhs7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_reqg7"]
+texture = ExtResource("1_wkjul")
+texture_margin_left = 2.0
+texture_margin_top = 1.0
+texture_margin_right = 2.0
+texture_margin_bottom = 1.0
+modulate_color = Color(0.17254902, 0.17254902, 0.3882353, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bkhs7"]
+texture = ExtResource("1_wkjul")
+texture_margin_left = 2.0
+texture_margin_top = 1.0
+texture_margin_right = 2.0
+texture_margin_bottom = 1.0
+modulate_color = Color(0.4862745, 0.67058825, 0.8352941, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wkjul"]
+texture = ExtResource("1_wkjul")
+texture_margin_left = 2.0
+texture_margin_top = 1.0
+texture_margin_right = 2.0
+texture_margin_bottom = 1.0
+modulate_color = Color(0.3529412, 0.42352942, 0.6901961, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iennx"]
+texture = ExtResource("2_bkhs7")
+texture_margin_top = 2.0
+texture_margin_bottom = 2.0
+
+[resource]
+HScrollBar/styles/grabber = SubResource("StyleBoxTexture_reqg7")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_bkhs7")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_wkjul")
+HScrollBar/styles/scroll = SubResource("StyleBoxTexture_iennx")

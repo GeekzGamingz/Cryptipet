@@ -14,7 +14,7 @@ func _has_point(point: Vector2) -> bool:
 #------------------------------------------------------------------------------#
 # Signaled Functions
 # GUI Input
-func _on_gui_input(event):
+func _on_gui_input(event) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed: 
@@ -26,25 +26,23 @@ func _on_gui_input(event):
 #------------------------------------------------------------------------------#
 # Custom Functions
 # Update Passthrough Mask
-func update_passthrough_mask():
+func update_passthrough_mask() -> void:
 	if !border: return
-	
+	# Get Project Settings
 	var base_width: float = ProjectSettings.get_setting("display/window/size/viewport_width")
 	var base_height: float = ProjectSettings.get_setting("display/window/size/viewport_height")
-	
 	var override_width: float = ProjectSettings.get_setting("display/window/size/window_width_override")
 	var override_height: float = ProjectSettings.get_setting("display/window/size/window_height_override")
-	
+	# Compare Dimensions
 	if override_height == 0: override_height = base_height
 	if override_width == 0: override_width = base_width
-	
+	# Caluclate Scale
 	var scale_factor = Vector2(override_width / base_width, override_height / base_height)
 	var scaled_points = PackedVector2Array()
-	
+	# Transform
 	var xform: Transform2D = border.get_global_transform_with_canvas()
 	for vertex in border.polygon:
 		var window_space_vertex = xform * vertex
 		var final_scaled_vertex = window_space_vertex * scale_factor
 		scaled_points.append(final_scaled_vertex)
-		
 	DisplayServer.window_set_mouse_passthrough(scaled_points)

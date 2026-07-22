@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://dhb4rr62ffxjv"]
 
-[ext_resource type="Texture2D" uid="uid://wnc2m06npfqg" path="res://assets/00 - UserInterface/00 - Spookivice/00 - Screens/Top Screen.png" id="1_w7ctl"]
-[ext_resource type="PackedScene" uid="uid://dftcgo4cne1st" path="res://source/01 - Main/02 - Entities/00 - Cryptid/Cryptid.tscn" id="2_w0rnr"]
+[ext_resource type="Texture2D" uid="uid://wnc2m06npfqg" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/00 - Backgrounds/_TopOff.png" id="1_w0rnr"]
+[ext_resource type="PackedScene" uid="uid://dftcgo4cne1st" path="res://source/01 - Main/02 - Entities/00 - Cryptid/_Cryptid.tscn" id="2_w0rnr"]
+[ext_resource type="Texture2D" uid="uid://sbyshnwyimx7" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Food_Icon.png" id="3_cxf82"]
+[ext_resource type="Texture2D" uid="uid://b10bnbldg2sf3" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Icon_Brackets.png" id="4_43lvc"]
+[ext_resource type="Texture2D" uid="uid://cq11gbecr75po" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Daytime_Icon.png" id="4_egaxy"]
+[ext_resource type="Texture2D" uid="uid://xs87vlci0md2" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Nighttime_Icon.png" id="5_43lvc"]
+[ext_resource type="Texture2D" uid="uid://vgufmsk78mtc" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Games_Icon.png" id="6_fxyhf"]
+[ext_resource type="Texture2D" uid="uid://r1fae6mprck" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Chat_Icon.png" id="7_3fnx7"]
+[ext_resource type="Texture2D" uid="uid://csogxk3da8m8r" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/FirstAid_Icon.png" id="8_rkajd"]
+[ext_resource type="Texture2D" uid="uid://bje2k8sibenxw" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Cleanup_Icon.png" id="9_ncl7e"]
 
 [node name="TopScreen" type="TextureRect" unique_id=1668624340]
 offset_right = 281.0
 offset_bottom = 265.0
 mouse_filter = 2
-texture = ExtResource("1_w7ctl")
-metadata/_edit_vertical_guides_ = [84.0, 197.0, 141.0]
+texture = ExtResource("1_w0rnr")
 
 [node name="LevelBorder" type="StaticBody2D" parent="." unique_id=934322642]
 
@@ -17,3 +24,56 @@ polygon = PackedVector2Array(87, 173, 84, 173, 84, 189, 90, 195, 191, 195, 197, 
 
 [node name="Cryptid" parent="." unique_id=1065017632 instance=ExtResource("2_w0rnr")]
 position = Vector2(141, 180)
+
+[node name="MenuContainer" type="HBoxContainer" parent="." unique_id=579397727]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 84.0
+offset_right = 195.0
+offset_bottom = 97.0
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="Feed" type="TextureButton" parent="MenuContainer" unique_id=237401447]
+layout_mode = 2
+focus_next = NodePath("../Day")
+focus_previous = NodePath("../Cleanup")
+texture_normal = ExtResource("3_cxf82")
+texture_focused = ExtResource("4_43lvc")
+
+[node name="Day" type="TextureButton" parent="MenuContainer" unique_id=450420656]
+layout_mode = 2
+focus_next = NodePath("../Play")
+focus_previous = NodePath("../Feed")
+toggle_mode = true
+texture_normal = ExtResource("4_egaxy")
+texture_pressed = ExtResource("5_43lvc")
+texture_focused = ExtResource("4_43lvc")
+
+[node name="Play" type="TextureButton" parent="MenuContainer" unique_id=1619768679]
+layout_mode = 2
+focus_next = NodePath("../Chat")
+focus_previous = NodePath("../Day")
+texture_normal = ExtResource("6_fxyhf")
+texture_focused = ExtResource("4_43lvc")
+
+[node name="Chat" type="TextureButton" parent="MenuContainer" unique_id=1617306956]
+layout_mode = 2
+focus_next = NodePath("../Heal")
+focus_previous = NodePath("../Play")
+texture_normal = ExtResource("7_3fnx7")
+texture_focused = ExtResource("4_43lvc")
+
+[node name="Heal" type="TextureButton" parent="MenuContainer" unique_id=1234981683]
+layout_mode = 2
+focus_next = NodePath("../Cleanup")
+focus_previous = NodePath("../Chat")
+texture_normal = ExtResource("8_rkajd")
+texture_focused = ExtResource("4_43lvc")
+
+[node name="Cleanup" type="TextureButton" parent="MenuContainer" unique_id=66788965]
+layout_mode = 2
+focus_next = NodePath("../Feed")
+focus_previous = NodePath("../Heal")
+texture_normal = ExtResource("9_ncl7e")
+texture_focused = ExtResource("4_43lvc")

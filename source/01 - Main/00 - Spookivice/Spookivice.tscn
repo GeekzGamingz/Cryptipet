@@ -2,28 +2,28 @@
 
 [ext_resource type="Script" uid="uid://ceuvalluc8uv1" path="res://source/01 - Main/00 - Spookivice/Spookivice.gd" id="1_ayhqb"]
 [ext_resource type="Script" uid="uid://ditu4xenbb0mk" path="res://source/01 - Main/00 - Spookivice/Border.gd" id="2_qmojm"]
-[ext_resource type="Texture2D" uid="uid://4250jyv0a3f7" path="res://assets/00 - UserInterface/00 - Spookivice/Spookivice.png" id="2_vakwt"]
-[ext_resource type="Texture2D" uid="uid://y66vmsoqj2vd" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/Left_Button_Unpressed.png" id="3_8e37w"]
+[ext_resource type="Texture2D" uid="uid://4250jyv0a3f7" path="res://assets/00 - Spookivice/Spookivice.png" id="2_vakwt"]
+[ext_resource type="Texture2D" uid="uid://y66vmsoqj2vd" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/Left_Button_Unpressed.png" id="3_8e37w"]
 [ext_resource type="PackedScene" uid="uid://dhb4rr62ffxjv" path="res://source/01 - Main/01 - Screens/00 - Top/TopScreen.tscn" id="3_31omo"]
-[ext_resource type="Texture2D" uid="uid://sg8v2m24lc3x" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/02 - Toggles/Spookivice_On.png" id="3_gm5fq"]
-[ext_resource type="Texture2D" uid="uid://cjat7kvm6bmg5" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/Menu_Button_Unpressed.png" id="3_vakwt"]
-[ext_resource type="Texture2D" uid="uid://bt7fb3jinkimw" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/Menu_Button_Pressed.png" id="4_1srch"]
-[ext_resource type="Texture2D" uid="uid://n7i33r1ngnxq" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/02 - Toggles/Spookivice_Off.png" id="4_31omo"]
-[ext_resource type="Texture2D" uid="uid://be76ppoesvkt8" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/Left_Arrow_Pressed.png" id="4_eh7ka"]
+[ext_resource type="Texture2D" uid="uid://sg8v2m24lc3x" path="res://assets/00 - Spookivice/01 - Buttons/02 - Toggles/Spookivice_On.png" id="3_gm5fq"]
+[ext_resource type="Texture2D" uid="uid://cjat7kvm6bmg5" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/Menu_Button_Unpressed.png" id="3_vakwt"]
+[ext_resource type="Texture2D" uid="uid://bt7fb3jinkimw" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/Menu_Button_Pressed.png" id="4_1srch"]
+[ext_resource type="Texture2D" uid="uid://n7i33r1ngnxq" path="res://assets/00 - Spookivice/01 - Buttons/02 - Toggles/Spookivice_Off.png" id="4_31omo"]
+[ext_resource type="Texture2D" uid="uid://be76ppoesvkt8" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/Left_Arrow_Pressed.png" id="4_eh7ka"]
 [ext_resource type="Script" uid="uid://dmiw3ydbb01nx" path="res://source/01 - Main/01 - Screens/00 - Top/TopScreen.gd" id="4_qmojm"]
-[ext_resource type="Texture2D" uid="uid://bqe3oqbp8teq0" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/Right_Button_Unpressed.png" id="5_eh7ka"]
-[ext_resource type="Texture2D" uid="uid://3selp3jp475o" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/Right_Arrow_Pressed.png" id="6_qdrm8"]
-[ext_resource type="Texture2D" uid="uid://bkrmapbnyu4rx" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/02 - Toggles/Sound_On.png" id="7_qmojm"]
-[ext_resource type="Texture2D" uid="uid://b6avgiyecp786" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/02 - Toggles/Sound_Off.png" id="8_0ce43"]
-[ext_resource type="Texture2D" uid="uid://d0irsgmg8vsvo" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/-_Button_Unpressed.png" id="9_po0vq"]
-[ext_resource type="Texture2D" uid="uid://ls40sqv5rytb" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/-_Button_Pressed.png" id="10_y2wyy"]
-[ext_resource type="Texture2D" uid="uid://bice3uoqjls13" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/+_Button_Unpressed.png" id="11_gm5fq"]
-[ext_resource type="Texture2D" uid="uid://bu2t3i48uyoo8" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/+_Button_Pressed.png" id="12_31omo"]
-[ext_resource type="Texture2D" uid="uid://dmh6xb4x2tlyv" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/O_Button_Unpressed.png" id="13_qmojm"]
-[ext_resource type="Texture2D" uid="uid://8vfgotf5gp6q" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/O_Button_Pressed.png" id="14_0ce43"]
-[ext_resource type="Texture2D" uid="uid://b5pslqhjhd0g3" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/00 - Unpressed/X_Button_Unpressed.png" id="15_da84v"]
-[ext_resource type="Texture2D" uid="uid://cmin1qq1wgq5b" path="res://assets/00 - UserInterface/00 - Spookivice/01 - Buttons/01 - Pressed/X_Button_Pressed.png" id="16_68csv"]
-[ext_resource type="Texture2D" uid="uid://c3u4h1h5ya4h8" path="res://assets/00 - UserInterface/00 - Spookivice/00 - Screens/Bottom Screen.png" id="17_1lxtc"]
+[ext_resource type="Texture2D" uid="uid://bqe3oqbp8teq0" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/Right_Button_Unpressed.png" id="5_eh7ka"]
+[ext_resource type="Texture2D" uid="uid://3selp3jp475o" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/Right_Arrow_Pressed.png" id="6_qdrm8"]
+[ext_resource type="PackedScene" uid="uid://dnajijafcg0ye" path="res://source/01 - Main/01 - Screens/01 - Bottom/BottomScreen.tscn" id="6_qmojm"]
+[ext_resource type="Texture2D" uid="uid://bkrmapbnyu4rx" path="res://assets/00 - Spookivice/01 - Buttons/02 - Toggles/Sound_On.png" id="7_qmojm"]
+[ext_resource type="Texture2D" uid="uid://b6avgiyecp786" path="res://assets/00 - Spookivice/01 - Buttons/02 - Toggles/Sound_Off.png" id="8_0ce43"]
+[ext_resource type="Texture2D" uid="uid://d0irsgmg8vsvo" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/-_Button_Unpressed.png" id="9_po0vq"]
+[ext_resource type="Texture2D" uid="uid://ls40sqv5rytb" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/-_Button_Pressed.png" id="10_y2wyy"]
+[ext_resource type="Texture2D" uid="uid://bice3uoqjls13" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/+_Button_Unpressed.png" id="11_gm5fq"]
+[ext_resource type="Texture2D" uid="uid://bu2t3i48uyoo8" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/+_Button_Pressed.png" id="12_31omo"]
+[ext_resource type="Texture2D" uid="uid://dmh6xb4x2tlyv" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/O_Button_Unpressed.png" id="13_qmojm"]
+[ext_resource type="Texture2D" uid="uid://8vfgotf5gp6q" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/O_Button_Pressed.png" id="14_0ce43"]
+[ext_resource type="Texture2D" uid="uid://b5pslqhjhd0g3" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/X_Button_Unpressed.png" id="15_da84v"]
+[ext_resource type="Texture2D" uid="uid://cmin1qq1wgq5b" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/X_Button_Pressed.png" id="16_68csv"]
 
 [node name="Spookivice" type="Control" unique_id=1499716846 node_paths=PackedStringArray("border")]
 layout_mode = 3
@@ -39,8 +39,7 @@ border = NodePath("Border")
 
 [node name="Border" type="Polygon2D" parent="." unique_id=723103497]
 color = Color(1, 1, 1, 0)
-offset = Vector2(-0.5, -0.5)
-polygon = PackedVector2Array(91, 56, 97.977196, 56, 101, 53, 102, 53, 102, 40, 100, 38, 100, 35, 105, 30, 107, 30, 112, 35, 112, 38, 110, 40, 110, 53, 111, 53, 114, 56, 168, 56, 171, 53, 172, 53, 172, 40, 170, 38, 170, 35, 175, 30, 177, 30, 182, 35, 182, 38, 180, 40, 180, 53, 181, 53, 184, 56, 191, 56, 198, 59, 243, 104, 246, 111, 246, 125, 250, 129, 252, 140, 252, 182, 250, 193, 246, 197, 246, 211, 243, 218, 198, 263, 191, 266, 91, 266, 84, 263, 39, 218, 36, 211, 36, 197, 32, 193, 30, 182, 30, 140, 32, 129, 36, 125, 36, 111, 39, 104, 84, 59)
+polygon = PackedVector2Array(90, 55, 97, 55, 100, 52, 101, 52, 101, 40, 99, 38, 99, 34, 104, 29, 107, 29, 112, 34, 112, 38, 110, 40, 110, 52, 111, 52, 114, 55, 167, 55, 170, 52, 171, 52, 171, 40, 169, 38, 169, 34, 174, 29, 177, 29, 182, 34, 182, 38, 180, 40, 180, 52, 181, 52, 184, 55, 191, 55, 198, 58, 243, 103, 246, 110, 246, 124, 250, 128, 252, 139, 252, 182, 250, 193, 246, 197, 246, 211, 243, 218, 198, 263, 191, 266, 90, 266, 83, 263, 38, 218, 35, 211, 35, 197, 31, 193, 29, 182, 29, 139, 31, 128, 35, 124, 35, 110, 38, 103, 83, 58)
 script = ExtResource("2_qmojm")
 
 [node name="Spookivice" type="TextureRect" parent="." unique_id=1240341634]
@@ -62,13 +61,10 @@ mouse_filter = 2
 layout_mode = 0
 stretch_mode = 2
 script = ExtResource("4_qmojm")
+location = "Graveyard"
 
-[node name="BottomScreen" type="TextureRect" parent="Screens" unique_id=1480069952]
+[node name="BottomScreen" parent="Screens" unique_id=1570758406 instance=ExtResource("6_qmojm")]
 layout_mode = 0
-offset_right = 281.0
-offset_bottom = 265.0
-mouse_filter = 2
-texture = ExtResource("17_1lxtc")
 
 [node name="Toggles" type="Control" parent="." unique_id=945017505]
 layout_mode = 1
@@ -81,10 +77,10 @@ mouse_filter = 2
 
 [node name="Power" type="TextureButton" parent="Toggles" unique_id=1730823322]
 layout_mode = 0
-offset_left = 206.0
-offset_top = 74.0
-offset_right = 227.0
-offset_bottom = 95.0
+offset_left = 202.0
+offset_top = 71.0
+offset_right = 230.0
+offset_bottom = 99.0
 toggle_mode = true
 button_pressed = true
 texture_normal = ExtResource("3_gm5fq")
@@ -115,6 +111,7 @@ offset_left = 209.0
 offset_top = 109.0
 offset_right = 224.0
 offset_bottom = 125.0
+focus_mode = 0
 texture_normal = ExtResource("3_vakwt")
 texture_pressed = ExtResource("4_1srch")
 
@@ -124,6 +121,7 @@ offset_left = 54.0
 offset_top = 132.0
 offset_right = 74.0
 offset_bottom = 170.0
+focus_mode = 0
 texture_normal = ExtResource("3_8e37w")
 texture_pressed = ExtResource("4_eh7ka")
 
@@ -133,6 +131,7 @@ offset_left = 207.0
 offset_top = 132.0
 offset_right = 227.0
 offset_bottom = 170.0
+focus_mode = 0
 texture_normal = ExtResource("5_eh7ka")
 texture_pressed = ExtResource("6_qdrm8")
 
@@ -142,6 +141,7 @@ offset_left = 55.0
 offset_top = 177.0
 offset_right = 70.0
 offset_bottom = 193.0
+focus_mode = 0
 texture_normal = ExtResource("9_po0vq")
 texture_pressed = ExtResource("10_y2wyy")
 
@@ -151,6 +151,7 @@ offset_left = 211.0
 offset_top = 177.0
 offset_right = 226.0
 offset_bottom = 193.0
+focus_mode = 0
 texture_normal = ExtResource("11_gm5fq")
 texture_pressed = ExtResource("12_31omo")
 
@@ -160,6 +161,7 @@ offset_left = 65.0
 offset_top = 201.0
 offset_right = 84.0
 offset_bottom = 221.0
+focus_mode = 0
 texture_normal = ExtResource("15_da84v")
 texture_pressed = ExtResource("16_68csv")
 
@@ -169,6 +171,7 @@ offset_left = 197.0
 offset_top = 201.0
 offset_right = 216.0
 offset_bottom = 221.0
+focus_mode = 0
 texture_normal = ExtResource("13_qmojm")
 texture_pressed = ExtResource("14_0ce43")
 

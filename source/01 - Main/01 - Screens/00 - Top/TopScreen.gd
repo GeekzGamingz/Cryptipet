@@ -7,5 +7,4 @@ extends TextureRect
 	set(new_location):
 		location = new_location
 		texture = Textures.LOCATIONS[location]
-		print("Location: ", location)
 #------------------------------------------------------------------------------#
