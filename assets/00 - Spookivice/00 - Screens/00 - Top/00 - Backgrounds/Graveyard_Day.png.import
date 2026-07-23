@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p4l3hqej3rl4"
-path="res://.godot/imported/Spookivice_Off_Icon.png-f2590f914de676525bd35ee15cd1e75b.ctex"
+uid="uid://5y0xykj2iki7"
+path="res://.godot/imported/Graveyard_Day.png-294bb8251fc0e7c057fc79233a902719.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/02 - Icons/Spookivice_Off_Icon.png"
-dest_files=["res://.godot/imported/Spookivice_Off_Icon.png-f2590f914de676525bd35ee15cd1e75b.ctex"]
+source_file="res://assets/00 - Spookivice/00 - Screens/00 - Top/00 - Backgrounds/Graveyard_Day.png"
+dest_files=["res://.godot/imported/Graveyard_Day.png-294bb8251fc0e7c057fc79233a902719.ctex"]
 
 [params]
 

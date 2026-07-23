@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://ml8fjrxcafya" path="res://assets/00 - Spookivice/00 - Screens/01 - Bottom/Screen_Scrollbar_Bar_Grey.png" id="1_wkjul"]
 [ext_resource type="Texture2D" uid="uid://b064ljgncgn05" path="res://assets/00 - Spookivice/00 - Screens/01 - Bottom/Screen_Scrollbar.png" id="2_bkhs7"]
+[ext_resource type="Texture2D" uid="uid://c15hcsq0wbgwb" path="res://assets/00 - Spookivice/NotifRect.png" id="3_bkhs7"]
+[ext_resource type="FontFile" uid="uid://vvenaa1mjw5p" path="res://assets/02 - Fonts/EnterCommand-Bold.ttf" id="4_tcib6"]
+[ext_resource type="FontFile" uid="uid://o1ydco6gvunt" path="res://assets/02 - Fonts/EnterCommand-Italic.ttf" id="5_o8fqx"]
+[ext_resource type="FontFile" uid="uid://dup4pp3oqr14l" path="res://assets/02 - Fonts/EnterCommand.ttf" id="6_33u5s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_reqg7"]
 texture = ExtResource("1_wkjul")
@@ -32,8 +36,36 @@ texture = ExtResource("2_bkhs7")
 texture_margin_top = 2.0
 texture_margin_bottom = 2.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_43fak"]
+texture = ExtResource("3_bkhs7")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a1j8a"]
+texture = ExtResource("3_bkhs7")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_txbq4"]
+texture = ExtResource("3_bkhs7")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
 [resource]
+default_font = ExtResource("6_33u5s")
 HScrollBar/styles/grabber = SubResource("StyleBoxTexture_reqg7")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_bkhs7")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_wkjul")
 HScrollBar/styles/scroll = SubResource("StyleBoxTexture_iennx")
+Panel/styles/panel = SubResource("StyleBoxTexture_43fak")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_a1j8a")
+RichTextLabel/fonts/bold_font = ExtResource("4_tcib6")
+RichTextLabel/fonts/italics_font = ExtResource("5_o8fqx")
+RichTextLabel/fonts/normal_font = ExtResource("6_33u5s")
+TooltipPanel/styles/panel = SubResource("StyleBoxTexture_txbq4")

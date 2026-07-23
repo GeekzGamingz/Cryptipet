@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dov63udho8a2v"]
+
+[ext_resource type="Theme" uid="uid://5hdiyrqlevro" path="res://assets/Base_Theme.tres" id="1_2ons6"]
+[ext_resource type="Script" uid="uid://c47prxvjnj2xd" path="res://source/03 - Notifications/Notification.gd" id="2_ggupl"]
+
+[node name="Notification" type="PanelContainer" unique_id=1998583760]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -140.5
+offset_right = 140.5
+offset_bottom = 12.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("1_2ons6")
+script = ExtResource("2_ggupl")
+
+[node name="MessageLabel" type="RichTextLabel" parent="." unique_id=1638522825]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "Message was [wave]lost[/wave] to time..."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=213134081]

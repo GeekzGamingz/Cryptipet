@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://dhb4rr62ffxjv" path="res://source/01 - Main/01 - Screens/00 - Top/TopScreen.tscn" id="3_31omo"]
 [ext_resource type="Texture2D" uid="uid://sg8v2m24lc3x" path="res://assets/00 - Spookivice/01 - Buttons/02 - Toggles/Spookivice_On.png" id="3_gm5fq"]
 [ext_resource type="Texture2D" uid="uid://cjat7kvm6bmg5" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/Menu_Button_Unpressed.png" id="3_vakwt"]
+[ext_resource type="PackedScene" uid="uid://byu4cdm57jcnm" path="res://source/03 - Notifications/Notifier.tscn" id="4_0ce43"]
 [ext_resource type="Texture2D" uid="uid://bt7fb3jinkimw" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/Menu_Button_Pressed.png" id="4_1srch"]
 [ext_resource type="Texture2D" uid="uid://n7i33r1ngnxq" path="res://assets/00 - Spookivice/01 - Buttons/02 - Toggles/Spookivice_Off.png" id="4_31omo"]
 [ext_resource type="Texture2D" uid="uid://be76ppoesvkt8" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/Left_Arrow_Pressed.png" id="4_eh7ka"]
-[ext_resource type="Script" uid="uid://dmiw3ydbb01nx" path="res://source/01 - Main/01 - Screens/00 - Top/TopScreen.gd" id="4_qmojm"]
 [ext_resource type="Texture2D" uid="uid://bqe3oqbp8teq0" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/Right_Button_Unpressed.png" id="5_eh7ka"]
 [ext_resource type="Texture2D" uid="uid://3selp3jp475o" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/Right_Arrow_Pressed.png" id="6_qdrm8"]
 [ext_resource type="PackedScene" uid="uid://dnajijafcg0ye" path="res://source/01 - Main/01 - Screens/01 - Bottom/BottomScreen.tscn" id="6_qmojm"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://b6avgiyecp786" path="res://assets/00 - Spookivice/01 - Buttons/02 - Toggles/Sound_Off.png" id="8_0ce43"]
 [ext_resource type="Texture2D" uid="uid://d0irsgmg8vsvo" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/-_Button_Unpressed.png" id="9_po0vq"]
 [ext_resource type="Texture2D" uid="uid://ls40sqv5rytb" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/-_Button_Pressed.png" id="10_y2wyy"]
+[ext_resource type="Script" uid="uid://bn6sc53igk8ea" path="res://source/01 - Main/00 - Spookivice/Buttons.gd" id="11_0ce43"]
 [ext_resource type="Texture2D" uid="uid://bice3uoqjls13" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/+_Button_Unpressed.png" id="11_gm5fq"]
 [ext_resource type="Texture2D" uid="uid://bu2t3i48uyoo8" path="res://assets/00 - Spookivice/01 - Buttons/01 - Pressed/+_Button_Pressed.png" id="12_31omo"]
 [ext_resource type="Texture2D" uid="uid://dmh6xb4x2tlyv" path="res://assets/00 - Spookivice/01 - Buttons/00 - Unpressed/O_Button_Unpressed.png" id="13_qmojm"]
@@ -57,14 +58,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TopScreen" parent="Screens" unique_id=1668624340 instance=ExtResource("3_31omo")]
+[node name="TopScreen" parent="Screens" unique_id=1668624340 node_paths=PackedStringArray("spookivice") instance=ExtResource("3_31omo")]
 layout_mode = 0
 stretch_mode = 2
-script = ExtResource("4_qmojm")
-location = "Graveyard"
+spookivice = NodePath("../..")
 
 [node name="BottomScreen" parent="Screens" unique_id=1570758406 instance=ExtResource("6_qmojm")]
 layout_mode = 0
+
+[node name="Notifier" parent="." unique_id=313177762 instance=ExtResource("4_0ce43")]
+layout_mode = 1
+offset_bottom = -94.0
 
 [node name="Toggles" type="Control" parent="." unique_id=945017505]
 layout_mode = 1
@@ -104,6 +108,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("11_0ce43")
 
 [node name="Menu" type="TextureButton" parent="Buttons" unique_id=1067384002]
 layout_mode = 0
@@ -176,3 +181,5 @@ texture_normal = ExtResource("13_qmojm")
 texture_pressed = ExtResource("14_0ce43")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="button_up" from="Buttons/Left" to="Buttons" method="_on_left_button_up"]
+[connection signal="button_up" from="Buttons/Right" to="Buttons" method="_on_right_button_up"]

@@ -1,10 +1,15 @@
 extends Node2D
+## [Cryptid] Movement
+##
+## This node manages the [Cryptid]'s Movement.
 #------------------------------------------------------------------------------#
 # Variables
 var direction: Vector2 = Vector2.ZERO
 var facing: String = "Left"
 # Exported Variables
+## Sets whether or not the [Cryptid] is flying.
 @export var is_flying: bool = false
+## Sets the [Cryptid]s base speed.
 @export var speed: float = 2.5
 # OnReady Variables
 @onready var walk_speed: float = speed

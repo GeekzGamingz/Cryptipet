@@ -1,8 +1,18 @@
 extends Control
+## Spookivice
+##
+## This node manages the [Cryptid]'s Spookivice. The device that binds and keeps
+## your [Cryptid] from being set loose into the real world.[br]
+## This is your responsibility.[br]
+## This is your curse...
 #------------------------------------------------------------------------------#
 # Variables
 var dragPoint = null
+# Exported Variables
 @export var border: Polygon2D
+# OnReady Variables
+@onready var buttons: Control = $Buttons
+@onready var notifier: Control = $Notifier
 #------------------------------------------------------------------------------#
 # Functions
 # Process

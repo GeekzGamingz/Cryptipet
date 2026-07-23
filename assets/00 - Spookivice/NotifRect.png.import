@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtd5fcqyd17to"
-path="res://.godot/imported/Graveyard.png-aa4b7ec422a711e1e0ae0f37c6f90d6e.ctex"
+uid="uid://c15hcsq0wbgwb"
+path="res://.godot/imported/NotifRect.png-bc9c55c02ede65e431d82c91628a7965.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/00 - Spookivice/00 - Screens/00 - Top/00 - Backgrounds/Graveyard.png"
-dest_files=["res://.godot/imported/Graveyard.png-aa4b7ec422a711e1e0ae0f37c6f90d6e.ctex"]
+source_file="res://assets/00 - Spookivice/NotifRect.png"
+dest_files=["res://.godot/imported/NotifRect.png-bc9c55c02ede65e431d82c91628a7965.ctex"]
 
 [params]
 

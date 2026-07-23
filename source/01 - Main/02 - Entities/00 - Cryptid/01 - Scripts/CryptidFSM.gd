@@ -54,6 +54,6 @@ func state_exit(old_state, new_state):
 func basic_movement() -> int:
 	if e.velocity.x > 0: return states.walk_right
 	elif e.velocity.x < 0: return states.walk_left
-	elif e.velocity.y < 0: return states.walk_up
 	elif e.velocity.y > 0: return states.walk_down
+	elif e.velocity.y < 0: return states.walk_up
 	return states.idle
