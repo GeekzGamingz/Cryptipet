@@ -1,16 +1,17 @@
 extends Control
 #------------------------------------------------------------------------------#
 # Constants
-const PANEL = preload("uid://dov63udho8a2v")
+const NOTIFICATION = preload("uid://dov63udho8a2v")
 #------------------------------------------------------------------------------#
 # Variables
 # OnReady Variables
 @onready var notifications: VBoxContainer = $Notifications
-#@onready var notification_audio: AudioStreamPlayer2D = $AudioPlayers/NotificationAudio
 #------------------------------------------------------------------------------#
 # Custom Functions
-func add_message(message, timeout):
-	var panel_scene = PANEL.instantiate()
-	notifications.add_child(panel_scene)
-	panel_scene.load_message(message, timeout)
-	#notification_audio.play()
+func add_message(message, timeout, priority):
+	var notification_scene = NOTIFICATION.instantiate()
+	notifications.add_child(notification_scene)
+	notification_scene.load_message(message, timeout)
+	notification_scene.priority = priority
+	for notice in notifications.get_children():
+		if !notice.priority && notice != notification_scene: notice.queue_free()

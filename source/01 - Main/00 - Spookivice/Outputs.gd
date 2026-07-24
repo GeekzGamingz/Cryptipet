@@ -1,0 +1,29 @@
+extends Node2D
+#------------------------------------------------------------------------------#
+# Variables
+var powered_on: bool = false
+var spawned: bool = false
+# OnReady Variables
+@onready var spookivice: Control = $".."
+@onready var toggles: Control = $"../Toggles"
+@onready var top_screen: TextureRect = $"../Screens/TopScreen"
+@onready var orphanage: Marker2D = $"../Screens/TopScreen/Orphanage"
+@onready var bottom_screen: TextureRect = $"../Screens/BottomScreen"
+#------------------------------------------------------------------------------#
+# Functions
+# Ready
+func _ready() -> void:
+	toggles.connect("power_toggled", power_toggled)
+	orphanage.connect("cryptid_spawned", cryptid_spawned)
+#------------------------------------------------------------------------------#
+# Custom Functions
+# Disable Buttons
+func disable_buttons(disabled: bool):
+	for button in spookivice.buttons.get_children(): button.disabled = disabled
+	for button in top_screen.menu_container.get_children(): button.disabled = disabled
+#------------------------------------------------------------------------------#
+# Custom Signaled Functions
+# Power Toggle
+func power_toggled(toggled_on: bool): powered_on = toggled_on
+# Cryptid Spawn Notification
+func cryptid_spawned(is_spawned: bool): spawned = is_spawned

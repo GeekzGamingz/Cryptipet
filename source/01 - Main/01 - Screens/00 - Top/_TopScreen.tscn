@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://dhb4rr62ffxjv"]
 
 [ext_resource type="Texture2D" uid="uid://wnc2m06npfqg" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/00 - Backgrounds/_TopOff.png" id="1_w0rnr"]
-[ext_resource type="Script" uid="uid://dmiw3ydbb01nx" path="res://source/01 - Main/01 - Screens/00 - Top/TopScreen.gd" id="2_43lvc"]
-[ext_resource type="PackedScene" uid="uid://dftcgo4cne1st" path="res://source/01 - Main/02 - Entities/00 - Cryptid/_Cryptid.tscn" id="2_w0rnr"]
+[ext_resource type="Script" uid="uid://dmiw3ydbb01nx" path="res://source/01 - Main/01 - Screens/00 - Top/_TopScreen.gd" id="2_oq06h"]
 [ext_resource type="Texture2D" uid="uid://sbyshnwyimx7" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Food_Icon.png" id="3_cxf82"]
 [ext_resource type="Texture2D" uid="uid://b10bnbldg2sf3" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Icon_Brackets.png" id="4_43lvc"]
 [ext_resource type="Texture2D" uid="uid://cq11gbecr75po" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Daytime_Icon.png" id="4_egaxy"]
@@ -12,23 +11,20 @@
 [ext_resource type="Script" uid="uid://dafgdosjyiplc" path="res://source/01 - Main/01 - Screens/00 - Top/00 - Menu/Time.gd" id="8_fxyhf"]
 [ext_resource type="Texture2D" uid="uid://csogxk3da8m8r" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/FirstAid_Icon.png" id="8_rkajd"]
 [ext_resource type="Texture2D" uid="uid://bje2k8sibenxw" path="res://assets/00 - Spookivice/00 - Screens/00 - Top/Cleanup_Icon.png" id="9_ncl7e"]
+[ext_resource type="Script" uid="uid://deu7lwgorrcxh" path="res://source/01 - Main/01 - Screens/00 - Top/Orphanage.gd" id="12_oq06h"]
 
 [node name="TopScreen" type="TextureRect" unique_id=1668624340]
 offset_right = 281.0
 offset_bottom = 265.0
 mouse_filter = 2
 texture = ExtResource("1_w0rnr")
-script = ExtResource("2_43lvc")
-location = "Graveyard"
-time = "Day"
+script = ExtResource("2_oq06h")
+metadata/_edit_vertical_guides_ = [85.0, 196.0, 141.0]
 
 [node name="LevelBorder" type="StaticBody2D" parent="." unique_id=934322642]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBorder" unique_id=2071827324]
 polygon = PackedVector2Array(87, 173, 84, 173, 84, 189, 90, 195, 191, 195, 197, 189, 197, 171, 84, 171, 84, 173, 194, 173, 194, 188, 190, 192, 91, 192, 87, 188)
-
-[node name="Cryptid" parent="." unique_id=1065017632 instance=ExtResource("2_w0rnr")]
-position = Vector2(141, 180)
 
 [node name="MenuContainer" type="HBoxContainer" parent="." unique_id=579397727]
 layout_mode = 0
@@ -83,5 +79,10 @@ focus_next = NodePath("../Feed")
 focus_previous = NodePath("../Heal")
 texture_normal = ExtResource("9_ncl7e")
 texture_focused = ExtResource("4_43lvc")
+
+[node name="Orphanage" type="Marker2D" parent="." unique_id=682031323 node_paths=PackedStringArray("top_screen")]
+position = Vector2(141, 180)
+script = ExtResource("12_oq06h")
+top_screen = NodePath("..")
 
 [connection signal="toggled" from="MenuContainer/Time" to="MenuContainer/Time" method="_on_toggled"]

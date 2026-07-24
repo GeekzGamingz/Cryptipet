@@ -19,4 +19,11 @@ extends Node2D
 ) var stage: String = "Essence":
 	set(new_stage):
 		stage = new_stage
+		if cryptid != null: cryptid.sprite_base.texture = Textures.CRYPTIDS[stage]
+		else:
+			print("Concept Switching to Global")
+			stage = Globals.Concept
 		print("Concept: ", stage)
+# OnReady Variables
+# Local Nodes
+@onready var cryptid: Cryptid = $"../.."

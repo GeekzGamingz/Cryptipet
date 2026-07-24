@@ -1,6 +1,8 @@
 extends PanelContainer
 #------------------------------------------------------------------------------#
 # Variables
+# Bools
+var priority: bool = false
 # Exported Variables
 # Strings
 @export var default: String = "Message was [wave]lost[/wave] to time..."

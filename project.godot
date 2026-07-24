@@ -17,6 +17,7 @@ config/icon="uid://p4l3hqej3rl4"
 
 [autoload]
 
+Globals="*uid://bs3dwb3rwi8ot"
 Textures="*uid://cxjhrtlktcr7y"
 
 [display]
@@ -48,3 +49,5 @@ ui_left_click={
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 viewport/transparent_background=true
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

@@ -1,15 +1,110 @@
 [gd_scene format=3 uid="uid://dftcgo4cne1st"]
 
-[ext_resource type="Script" uid="uid://dhma1bkni6i3v" path="res://source/01 - Main/02 - Entities/00 - Cryptid/Cryptid.gd" id="1_4l88x"]
+[ext_resource type="Script" uid="uid://dhma1bkni6i3v" path="res://source/01 - Main/02 - Entities/00 - Cryptid/_Cryptid.gd" id="1_4l88x"]
 [ext_resource type="Script" uid="uid://cpqxbypr2mxug" path="res://source/01 - Main/02 - Entities/00 - Cryptid/01 - Scripts/CryptidFSM.gd" id="2_wglnx"]
 [ext_resource type="Script" uid="uid://b1qu2lrmmwdoo" path="res://source/01 - Main/02 - Entities/00 - Cryptid/01 - Scripts/CryptidMovement.gd" id="3_unaj7"]
 [ext_resource type="Script" uid="uid://d1cclf7ckdv1y" path="res://source/01 - Main/02 - Entities/00 - Cryptid/01 - Scripts/CryptidHunger.gd" id="4_o7kha"]
 [ext_resource type="Script" uid="uid://duhgxow6a1h2q" path="res://source/01 - Main/02 - Entities/00 - Cryptid/01 - Scripts/CryptidHappiness.gd" id="5_dm4q3"]
 [ext_resource type="Script" uid="uid://df02wjoyni16q" path="res://source/01 - Main/02 - Entities/00 - Cryptid/01 - Scripts/CryptidConcept.gd" id="6_f6ol5"]
+[ext_resource type="Texture2D" uid="uid://iwxc6pn28n3e" path="res://assets/03 - Entities/Cryptid/Essence.png" id="7_unaj7"]
+
+[sub_resource type="Animation" id="Animation_unaj7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Sprites/Base:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_o7kha"]
+resource_name = "escape"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Sprites/Base:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [36, 37, 38, 39, 40]
+}
+
+[sub_resource type="Animation" id="Animation_dm4q3"]
+resource_name = "idle"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Sprites/Base:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15, 16]
+}
+
+[sub_resource type="Animation" id="Animation_f6ol5"]
+resource_name = "transform"
+length = 1.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Sprites/Base:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_k7382"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Sprites/Base:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27, 28, 29, 30, 31]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oku6s"]
+_data = {
+&"RESET": SubResource("Animation_unaj7"),
+&"escape": SubResource("Animation_o7kha"),
+&"idle": SubResource("Animation_dm4q3"),
+&"transform": SubResource("Animation_f6ol5"),
+&"walk": SubResource("Animation_k7382")
+}
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a1j8a"]
 radius = 2.0
-height = 10.0
+height = 14.0
 
 [node name="Cryptid" type="CharacterBody2D" unique_id=1065017632]
 collision_layer = 0
@@ -22,15 +117,24 @@ script = ExtResource("2_wglnx")
 
 [node name="Movement" type="Node2D" parent="Scripts" unique_id=1426148674]
 script = ExtResource("3_unaj7")
+speed = 5.0
 
-[node name="Hunger" type="Node2D" parent="Scripts" unique_id=2143901435]
-script = ExtResource("4_o7kha")
+[node name="Concept" type="Node2D" parent="Scripts" unique_id=816813666]
+script = ExtResource("6_f6ol5")
 
 [node name="Happiness" type="Node2D" parent="Scripts" unique_id=1773535689]
 script = ExtResource("5_dm4q3")
 
-[node name="Concept" type="Node2D" parent="Scripts" unique_id=816813666]
-script = ExtResource("6_f6ol5")
+[node name="Hunger" type="Node2D" parent="Scripts" unique_id=2143901435]
+script = ExtResource("4_o7kha")
+
+[node name="Sprites" type="Node2D" parent="." unique_id=431798492]
+
+[node name="Base" type="Sprite2D" parent="Sprites" unique_id=1680327893]
+position = Vector2(-1, -20)
+texture = ExtResource("7_unaj7")
+hframes = 12
+vframes = 4
 
 [node name="Raycasts" type="Node2D" parent="." unique_id=550828293]
 
@@ -52,6 +156,16 @@ target_position = Vector2(-7.5, 0)
 wait_time = 2.5
 one_shot = true
 autostart = true
+
+[node name="Players" type="Node2D" parent="." unique_id=629029468]
+
+[node name="Animation" type="Node2D" parent="Players" unique_id=2013962844]
+
+[node name="Sprites" type="AnimationPlayer" parent="Players/Animation" unique_id=747549301]
+libraries/ = SubResource("AnimationLibrary_oku6s")
+autoplay = &"idle"
+
+[node name="Audio" type="Node2D" parent="Players" unique_id=1007804820]
 
 [node name="Outputs" type="Node2D" parent="." unique_id=1958444179]
 

@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cancyc7raacos" path="res://source/03 - Notifications/Notifier.gd" id="1_aitbh"]
 
 [node name="Notifier" type="Control" unique_id=313177762]
+custom_maximum_size = Vector2(111, 72)
+clip_contents = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,13 +12,12 @@ anchor_bottom = 1.0
 offset_left = 85.0
 offset_top = 99.0
 offset_right = -85.0
-offset_bottom = -126.0
+offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aitbh")
 
 [node name="Notifications" type="VBoxContainer" parent="." unique_id=429740300]
-custom_maximum_size = Vector2(111, 40)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

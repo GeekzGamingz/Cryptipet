@@ -12,4 +12,7 @@ var LOCATIONS: Dictionary = {
 	"Graveyard_Day": preload("uid://5y0xykj2iki7")
 }
 ## Stores the Cryptid Sprite Sheet [Texture2D]s to a Global [Dictionary]
-var CRYPTIDS: Dictionary = {}
+var CRYPTIDS: Dictionary = {
+	"Essence": preload("uid://iwxc6pn28n3e"),
+	"Rumor": preload("uid://dhn12h3asjb3v")
+}
